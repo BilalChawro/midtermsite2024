@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "Page7.1.html"> Previous Page </a></p>
+
+
+	</div>
+
+	<div class = "head1">
+		<h1> Let's Leave </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `“You’re right, Sophie. This is all getting a little too weird. Let’s just leave.” you say.**
+
+You gather your belongings and head into the foyer. You reach for the door handle, and pull, but… nothing! You tug at it again. Letting go of the vacuum, you pull with both hands.**
+
+“It won’t budge!” you cry to Sophie. Sophie stares in disbelief, mouth agape, and then starts yanking on the second door handle. You both try pushing as well, but no luck.**
+
+“Well, this is great,” Sophie snorts, leaning on the door. “So much for our quiet getaway. I guess we have to find that maid and get her to open the door. But which way did she go?”**
+
+It’s up to you.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 3000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="SittingRoom.html"><p id = "choice1">Look for her through the sitting room.
+</p>
+			</a>
+			<a href="Lounge.html"><p id = "choice1">Look for her through the lounge.</p>
+			</a>
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

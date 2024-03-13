@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "HardHit.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Distract Her and Go For the Attack </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = ` “Hey lady, I was reading your books, and apparently you’re doing this ritual thing all wrong!” you blurt out at her.**
+
+Apparently it worked. Mrs. Alexander cocks her head at your angrily, but at the same time her wrist falls and the knife moves away from Sophie’s throat. You charge forward with the cane and smash her full force across the face. Sophie pulls free as the woman falls in a heap on the floor.**
+
+You quickly hug Sophie. “Let’s get out of here!” you cry. The two of you dash through the bathroom and down the stairs. As you hurdle down the stairs, you see the maid standing at the bottom, looking up with a frightened look on her face.**
+
+“Let us out of here, NOW!” you scream at her. She nods, shaking violently all the while, and fishes in her pocket for the key. She hands it to you and you unlock the door, and the three of you run to freedom.**
+
+Mr. and Mrs. Alexander were arrested and charged with over 30 counts of murder. They had been killing and “harvesting” teenagers for almost a decade. Mrs. Alexander had had several severely deformed children, which were found living in the house, being treated no better than animals. Apparently they were doing the rituals in an attempt to have a perfect child. A DNA test requested by the court showed the reason - they were half-brother and sister.**
+
+Vera (the maid) is currently doing the round of talk shows. She’ll even wrote a book, its title being “My life in Hell House.”**
+
+You and Sophie bought a very nice place in another town with the money you got from doing interviews. You’ll never have to clean another house again.**
+
+
+And that’s a good ending.
+`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 5000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a><p id = "end1"></p>
+			</a>
+			<a><p id = "end1">THE END</p>
+			</a>
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

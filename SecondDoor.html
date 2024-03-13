@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "FollowHim.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Try the Second Door </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `“We’re never gonna find a key,” you hiss at her. “That’s just in books! This is real life, and I don’t care where it leads, as long as it’s outta here!” You grasp the handle and turn it.**
+
+“Uh ohh…” Sophie’s voice trails off weakly. “What is it?” you ask impatiently, following her gaze to the ground, where you see.. a dark red substance in a pool by the wall.**
+
+“What the…” you wonder and you approach the wall. “Don’t…” Sophie protests feebly. You touch the wall, which to your surprise and amazement, pops open with such force it makes you jump back. And out of the hidden compartment falls a badly mutilated body!**
+
+“Urgg… I’m gonna be sick…” Sophie chokes and coughs.**
+
+“What the hell is this…??” you wonder out loud.**
+
+“Well, I don’t wanna find out. Let’s just get the hell out of here!” Sophie cries.**
+
+Just then, you hear the doorknob of the locked door rattle. You look at each other and then the two of you hurdle through the other door as fast as you can. You rush through a dusty breakfast room and into a hallway.**
+
+Rushing down the hallway, you can see up ahead that it branches in 3 directions. To the right is a dark corridor. To the left is a relatively well lit hallway. Straight ahead is an open door, through which you can see a piano.** Which way do you choose?`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 5000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="DarkCorridor.html"><p id = "choice1">Down the dark corridor to the right.</p>
+			</a>
+			<a href="OffLeft.html"><p id = "choice1">Off to the left.</p>
+			</a>
+			<a href="Straight.html"><p id = "choice1">Continue straight into the room.</p>
+			</a>
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

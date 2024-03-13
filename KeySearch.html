@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "FollowHim.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Search for a Key </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `
+“Well, let’s try the desk.” You go around to the back of the large pine desk and start opening drawers and rummaging through. Sophie does likewise on the left side of the desk.**
+
+Suddenly, Sophie grabs your arm. “Hey, look at this!” she exclaims, shoving a picture in your face.**
+
+It is a picture of Mr. Alexander, the man you just met, and a red-headed woman. They are smiling lovingly at each other.**
+
+You point at some paneling to the left of the desk. There is a dark red stain pooling up at the bottom edge.**
+
+Sophie’s hand flies to her mouth. “Oh, my God! I don’t even want to know…”**
+
+You hear the locked door click again, and both your heads snap towards it. The door opens quickly… and standing in the doorway is Mr. Alexander! He looks incredibly angry! The two of you scream and run for the other door…**
+
+You tumble through the door into a windowed breakfast room. You and Sophie hurriedly stumble through the iron-wrought chairs and your eyes dart around for which way to go. You can see a garden from here, but there are no doors leading outside. There is also a door to your left, and a door to the far right, but it looks like Mr. Alexander might make it there first. **What will you do?`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 5000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="LeftDoor.html"><p id = "choice1">Go to the left door.</p>
+			</a>
+			<a href="RightDoor.html"><p id = "choice1">Risk it and go to the right door.</p>
+			</a>
+			<a href="BreakWindow.html"><p id = "choice1">Grab a chair and break a window.</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

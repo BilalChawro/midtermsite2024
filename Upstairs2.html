@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "Upstairs.html"> Previous Page </a></p>
+
+
+	</div>
+
+	<div class = "head1">
+		<h1> Opposite Way Down the Hall </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `There is a door decorated with pictures of balloons and flowers. “Okay, this looks relatively safe. It’s the tamest thing I’ve seen so far.” You enter and look around.**
+
+It appears to be a children’s bedroom. The two of you search around for a phone. You are looking in a back corner, when you hear a loud moan through the wall. “Huh?” you say. You touch the wall, and to your surprise it opens like a door. You peek inside in the darkness.**
+
+The moan comes again, this time louder. You are startled, but you keep looking inside. As your eyes adjust to the darkness of the crawl space, you see what is moaning. It’s some sort of person, but it is extremely deformed. Its eyes loll at you and it moans again.**
+
+Sophie stifles a scream. “What is it?” she cries.**
+
+“I don’t know, “ you say. But somehow you are brought to pity for this creature. As you slowly step forward, you notice there are at least two similar creatures in the room. They lay on soiled mattresses, moaning in pain. As you look closer, you realize by their small sizes that they are probably children.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 3000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href=""><p id = "choice1"></p>
+			</a>
+			<a href="Upstairs3.html"><p id = "choice1">Continue...</p>
+			</a>
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

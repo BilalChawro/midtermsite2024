@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "SittingRoom1.html"> Previous Page </a></p>
+
+
+	</div>
+
+	<div class = "head1">
+		<h1> "We'd Rather Just Leave" </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = ` “I’m sorry, Mr. Alexander, but we’ve changed our minds.” you say. “We’d really rather not. But the door seems to be locked. Could you please show us the way out?”**
+
+Mr. Alexander’s brow furrows into a frown. “Really, I think that’s quite unprofessional, kids. You agreed to help us.”**
+
+Sophie appears to be embarrassed. “No, of course we’re not unprofessional, Mr. Alexander. We’ll do what we came to do. Now could we see the list of tasks?”**
+
+Mr. Alexander’s mood sees to have improved. “Yes, of course. Just come with me upstairs.”**
+
+You’ve got doubts, but Sophie is right on his heels as he heads out of the room. So you shrug and follow as well.**
+
+The three of you head up the stairs. At the top, Mr. Alexander motions for you to go through a door. You and Sophie oblige.**
+
+But as soon as you step across the threshold, Mr. Alexander fiercely slams the door.**
+
+You hear the lock click. “Damn!” you cry out. “What the hell is going on?”**
+
+“I’m sorry!” Sophie whines. “I’m so stupid! I followed him because I was afraid he would give us a bad rep around town! Now I’ve totally screwed us!!”**
+
+You’re not really worried about your reputation right now. As your eyes adjust to the seamy yellow light of your prison, you realize you’re not alone.**
+
+A red-headed woman in a black bathrobe stands menacingly just a few feet away. She holds a large butcher knife, and she starts to approach.**
+
+“Oh my God!” Sophie screams and begins to bang on the door.**
+
+You’ve got to do something fast.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 5500));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="TryTalk.html"><p id = "choice1">Try to talk to the woman.
+</p>
+			</a>
+			<a href="Fight.html"><p id = "choice1">Look for something to fight her off with.
+</p>
+			</a>
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "HardHit.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Hit as Hard as You Can and Get Out </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `You run for the left. You see many doorways down the hallway, but you’re not stopping yet. When you see a slightly ajar doorway on your left, you duck in and try to hide.**
+
+This room seems to be a small bedroom. However, it’s filled with all sorts of strange books. There are also symbols drawn on the wall. You hurry and squeeze yourself behind a dilapidated old bed.**
+
+Your heart is racing. Are you going to be found? You wait for what seems like forever, but no one comes.**
+
+Right by your foot is a large arcane looking text. Curious, you reach out and flip it open. It fall naturally to a page about ancient fertility ceremonies. You read on. It seems in medieval times, queens who could not bear children would make sacrifices of local teenagers to the fertility gods. It also goes on to say that eating the reproductive organs of these sacrifices would further enhance fertility.**
+
+You shudder with the realization that THIS is what’s going on in this house. Mr. Alexander must really believe this junk will work for his wife.**
+
+Well, you are NOT going to be the next sacrifice. You stand yourself up. You look around the room, and see some sort of metal cane leaning up against the door. You grasp it firmly and head out the door. You’re ready to fight back against anyone who thinks they’re gonna cut you up.**
+
+You head out into the hallway. There’s no one there. Walking back the way you came, you notice that the staircase leading down is right nearby. In your haste you must not have seen it before. As you put your hand on the barrister and prepare to head down, you notice the room in front of you is glowing through the door jamb.**
+
+You still don’t know where Sophie is. They might be holding her captive. You could just go down the stairs and bash your way out of the house…**but is Sophie going to be okay?`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 7000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="Glowing.html"><p id = "choice1">Look for Sophie in the glowing room.</p>
+			</a>
+			<a href="Downstairs.html"><p id = "choice1">Head down the stairs. You’ll send help later...</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

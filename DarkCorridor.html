@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "SecondDoor.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Down the Dark Corridor </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `
+Maybe it’s not the best decision to go into this dark, foreboding chamber; but you don’t have much time to think through your decision. You pull Sophie by the wrist off to the right and hurry down the dark passageway.**
+
+The walls of the passageway are made of dark stones. The air is damp and cool. You hurry several yards before coming upon a heavy wooden door. You quickly twist the iron handle and go through, letting the door close soundlessly behind you.**
+
+The second the door shuts, it is pitch black in the room. You tentatively reach for the door handle, but there is none. The door only opened on the other side, you realize. Your heart sinks into your stomach.**
+
+“Oh man, maybe we shouldn’t have come this way…” Sophie whispers to you. You can tell by the tone of her voice that she is very scared.**
+
+The two of you feel your way along the room, moving your hands over the cold, slimy walls.**
+
+Just then, you hear someone or something moving to your right. `;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="LeftQuickly.html"><p id = "choice1">Move quickly to the left.</p>
+			</a>
+			<a href="Sound.html"><p id = "choice1">Investigate the sound.</p>
+			</a>
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

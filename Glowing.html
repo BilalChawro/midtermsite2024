@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "HardHit.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Look for Sophie in the Glowing Room </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `You’re not leaving without your best friend. You carefully push open the door.**
+
+You’re now in a bathroom, which used to be a really deluxe place, but looks kind of ratty now. You realize the glow is actually coming from the next room.**
+
+Walking as quietly as you can, you creep through the bathroom, gripping the cane tightly. You slowly open the door…..**
+
+This must be the master bedroom. It’s covered from head to toe in black and wine-colored velvet. The Alexanders must be goth, you think.**
+
+You hear a hiss, and turn your head sharply to the right. It’s the woman from the photograph, but she looks pretty crazy now. She’s also got Sophie by the hair with a butcher knife at her throat! Sophie’s eyes are pleading at you.
+
+What do you do?
+`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 3000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="Reason.html"><p id = "choice1">Try to reason with the woman.</p>
+			</a>
+			<a href="Distract.html"><p id = "choice1">Distract her into moving the knife away from Sophie, and go for the attack.</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

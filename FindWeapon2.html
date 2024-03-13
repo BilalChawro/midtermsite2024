@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "FindWeapon.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Bonus Room </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `This is some sort of large bonus room. There are stairs going down into a play area of sorts. There are bunkbeds, toys and other things. It appears to be set up for many children, but you don’t see any. This must have something to do with the rituals.**
+
+You and Sophie rush down the mini staircase and look for a place to hide.**
+
+You scurry behind a bookshelf. Sophie squeezes in next to you.**
+
+You hear footsteps, followed by voices. They get louder and come into earshot.**
+
+“I don’t really care, Vera! You find those kids and get them to me!” You wince as you hear Mr. Alexander referring to you and Sophie.**
+
+The reply is too soft for you to hear, but you hear a scuffling noise and Mr. Alexander hisses, “Or, we could just use you…” You hear Vera whimper back something unintelligible.**
+
+The two of them then move away, down the hall. After it has been silent for a few moments, you start to creep out from behind the bookshelf. But as you are feeling your way out, your elbow bumps into a small indentation in the wall. Much to your surprise, the wall opens up into a dark, foul smelling room.**
+
+You stumble back, choking on the smell.**
+
+Just then, you hear a small voice coming out of the darkness. “Helloooo…” it calls.**
+
+What do you do?`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="Answer.html"><p id = "choice1">Answer</p>
+			</a>
+			<a href="Answer.html"><p id = "choice1">Stay Silent</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

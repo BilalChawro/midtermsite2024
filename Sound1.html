@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "Sound.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Escape </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `“I don’t know what’s going on here, but it’s something horrible,” Silo says when you are done. “Listen, I think I found a way out. I’ve been pushing some loose bricks, but I’m pretty exhausted from not eating, so I can’t move them anymore.” Just then his stomach growls loudly, and he smiles weakly.**
+
+You and Sophie move to the place he was talking about and start moving bricks. It only takes a few minutes of the two of you lifting to make a big enough hole in the wall. You, Sophie and Silo quickly squeeze through the tunnel. To your relief, it surfaces at a sewer grate out on the road, and the three of you hurry to your car.**
+
+You go to the police, and even though at first they are doubtful, they finally believe your wild story and go to the house to investigate. They find it in blazes. The fire department struggles to subdue the flames. The house is eventually completely destroyed. Search crews later find dozens of burned bodies and human remains, and strange occult paraphernalia.**
+
+You, Sophie and Silo sell the rights to the story and it is quickly made into a horror movie. You never really understand what really was going on in the mansion, but it doesn’t matter. You are now safe, and a millionaire!`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 5000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a><p id = "end1"></p>
+			</a>
+			<a><p id = "end1">THE END</p>
+			</a>
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

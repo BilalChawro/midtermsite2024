@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "LeftDoor.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Dash into the Lounge </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `You urge Sophie to follow you into the lounge. The two of you huddle in the corner behind the wet bar.**
+
+“What is going on?” Sophie hisses to you.**
+
+“I don’t know. All I know is, Mr. Alexander isn’t too nice and we’ve gotta get out of here!” you respond.**
+
+“No chance this place has a phone, huh?” she asks you.**
+
+“Hmm, actually, it probably does. They did call us to come over,” you tell her.**
+
+“Man, I wish I’d never taken that call,” she moans.**
+
+“No time to worry about what we shouldn’t have done. Let’s just find a working phone and..”**
+
+You stop and pull yourself further into the shadows as you hear someone approach. You peek out from behind the wet bar to see the maid pattering past.**
+
+She could help you find a phone. But then again, she does live here, and she might try to hurt you. You could just follow her and see where you goes, maybe there is a phone there.**
+
+What do you do?`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="SilentFollow.html"><p id = "choice1">Follow the maid silently.
+</p>
+			</a>
+			<a href="StandUp.html"><p id = "choice1">Stand up and talk to her.</p>
+			</a>
+		
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

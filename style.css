@@ -1,0 +1,167 @@
+
+
+body {	
+	background-color: black;
+	font-family: "Pixelify Sans", sans-serif;
+	color: white;
+
+}
+
+
+
+.head1 {
+	text-align: center;
+	font-size: 25px;
+	color: lightgreen;
+
+
+	
+}
+
+.menu {
+	box-sizing: border-box;
+}
+
+
+#button {
+	display: inline-block;
+	text-align: center;
+}
+#button1 {
+	display: inline-block;
+	text-align: center;
+}
+#button2 {
+	display: inline-block;
+	text-align: center;
+	color: darkgrey;
+}
+#head2 {
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	
+
+}
+
+#content {
+	padding: 30px;
+	font-size: 30px;
+	margin: 10px;
+	color: white;
+	font-size: 20px;
+	width: 94%;
+}
+
+
+/* 
+FOR IMAGES
+
+.box { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+*/
+
+.mini_head {
+	text-align: center;
+	color:white;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+p {
+	color: white;
+	font-size: 25px;
+	width: 31%;
+	padding: 5px;
+	margin: 5px;
+	vertical-align: center;
+	
+
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.sentence {
+	font-size: 30px;
+	text-align: center;
+}
+
+
+
+#choice1{
+	display: inline-block;
+	color: lightgreen;
+	font-size: 50px;
+	text-align: center;
+	animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+#end{
+	display: inline-block;
+	color: red;
+	font-size: 80px;
+	text-align: center;
+	animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#end1{
+	display: inline-block;
+	color: lightgreen;
+	font-size: 80px;
+	text-align: center;
+	animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+.typing-container {
+      display: contents;
+      margin-left: 8px;
+      justify-content: center;
+      align-items: center;
+      
+
+  }
+
+ .input-cursor {
+      display: inline-flex;
+      width: 2px;
+      height: 28px;
+      background-color: white;
+      margin-left: 8px;
+      animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

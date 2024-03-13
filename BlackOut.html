@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "RightDoor.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Black Out... </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `You come back to consciousness what seems like centuries later in a damp, foul smelling room. Really foul smelling. It’s like the worst thing you’ve ever smelled. You move your body slowly, because you have a massive headache from whatever knocked you out. Groggy and nauseated, you pull yourself up to figure out where you are.**
+
+It seems to be what used to be a bathroom. It’s pretty large for a bathroom. There are two doors, one on each side. You stumble painfully first to one, then the other, but they are both locked.**
+
+God, what is that horrible smell? you think. You stagger across the stained white tile floor as if in a trance to the bathtub. The curtain is pulled around it, but you just can’t resist… you pull it back.**
+
+“Jesus Christ!” You lurch back violently, your stomach flipping in your stomach. There what used to be a young woman, who has obviously been gutted and dead for quite some time. You yank back the curtain and tumble back to the other side of the bathroom. As you sink to the floor, your shirt rises up.**
+
+Looking down, you see purple markings on your stomach. Horrified, you realize they are the same kind of markings your sister had on her when she had to have her appendix removed. But you’re not in a hospital. Is this what happened to the girl in the tub?**
+
+I gotta get out of her, NOW, your brain screams. You go for the door on your right and thrash against it with all of your might. You can hear the door breaking on its hinges, but at the same time you hear a noise at the other door.**
+
+Decision time.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4500));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="HardHit.html"><p id = "choice1">Hit as hard as you can and get the hell out of this room.</p>
+			</a>
+			<a href="FindWeapon.html"><p id = "choice1">Find a weapon and face whoever is at the other door.</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

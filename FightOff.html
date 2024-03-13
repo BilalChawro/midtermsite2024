@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "FoyerFollow.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Fight off Mr. Alexander </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `Luckily, Sophie must have dropped her knapsack in here earlier. You quickly grope through the bag of cleaning supplies. You find what you are looking for, an industrial size can of generic Lysol.**
+
+Grabbing Mr. Alexander by the bicep, you spray him in full force in the eyes with the toxic stuff. It does the trick and he roars loudly in pain, stumbling away from Vera.**
+
+You hurriedly stoop and pick up the key, and unlock the door. You, Sophie, and Vera flee out into the very welcome sunshine, running full force down the long hill to your car, parked on the street. The three of you jump in and you start the car as fast as you can.**
+
+You go to the police station, and although they are skeptical at first, they believe you after the units sent to the mansion find dozens of bodies. Apparently the Alexanders were involved in some sort of rituals. No one will ever really know what they were because the Alexanders went to the gas chamber without explaining, and though she had extensive therapy, Vera never could speak about it. A room was found filled with charred books, but no one could make sense of them.**
+
+It doesn’t really matter, does it? You are just glad to be free. And you won’t be cleaning any more mansions for a long time.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a><p id = "end1"></p>
+			</a>
+			<a><p id = "end1">THE END</p>
+			</a>
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+

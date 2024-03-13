@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+<body onload="typeWriter();">
+
+
+	
+	<div class = "menu">
+
+		<p id = "button"><a href = "credits.html"> Credits </a></p>
+		<p id = "button1"><a href = "index.html"> Back to Beginning </a></p>
+		<p id = "button"><a href = "BlackOut.html"> Previous Page </a></p>
+
+	</div>
+
+	<div class = "head1">
+		<h1> Find a Weapon </h1>
+	</div>
+
+
+
+	
+
+	<div class="typing-container">
+    	<span id="demo" class="sentence"></span>
+    	<span class="input-cursor"></span>
+  	</div>
+
+	
+	<script>
+
+	var i = 0;
+	var txt = `Your eyes sweep the room for a weapon of some sort. The best thing you can find is a plunger behind the toilet. Better than nothing, you think, and grab it.**
+
+You arm yourself with the plunger and prepare to face ….**
+
+The door swings open…**
+
+“Sophie!” you cry.**
+
+The two of you hug each other. “I was so worried about you!” she exclaims.**
+
+“We’ve gotta get out of here,” you tell her. “There’s another body in here, and I think they plan to do the same to us.”**
+
+Sophie grabs your wrist and starts pulling you out of the room, and into a bedroom. As the two of you move, she says, “Yeah, I know. I’ve been looking all over this house for you and I overheard Mr. Alexander talking. Apparently they do some sort of weird rituals to get Mrs. Alexander to have a healthy baby. It has to do with eating organs of teenagers!”**
+
+You shiver as the two of you rush down the hallway.**
+
+Just then, you hear someone on the stairs. You and Sophie rush past the stairs and into a room.`;
+	
+	var speed = 30;
+
+	function typeWriter() {
+  		if (i < txt.length) {
+  			if (txt.charAt(i) == "*") {
+  				document.getElementById("demo").innerHTML += "<br>";
+    			i++;
+    		}
+  			else{
+    			document.getElementById("demo").innerHTML += txt.charAt(i);
+    			i++;
+    		}
+    		setTimeout(typeWriter, speed);
+
+    		
+ 		}
+
+
+ 		setTimeout("showChoices()", (speed * txt.length + 4000));
+	}
+
+	</script>
+
+	<br>
+	<br>
+	<br>
+
+	<div id="choices" style="display:none">
+		<div class = "menu">
+			<a href="FindWeapon2.html"><p id = "choice1">Continue...</p>
+			</a>
+
+
+		</div>
+	    
+	</div>
+
+	<script>
+		function showChoices() { 
+    		document.getElementById("choices").style.display = "inline";
+    	}
+		//setTimeout("showChoices()", 3000);
+	</script>
+	
+
+	
+	<h2 id = "head2"></h2>
+
+	<p id = "content"></p>
+
+
+	<!--
+		IMAGE EXAMPLE
+	<div class = "box">
+		
+	<img src="finger.webp" style ="width:800px;height:450px";>
+
+	</div>
+	-->
+
+
+
+
+
+
+
+
+
+	
+
+
+
+	
+
+</body>
+</html>
+
+
